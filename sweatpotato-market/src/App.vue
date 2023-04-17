@@ -1,12 +1,9 @@
 <script setup lang="ts">
-import HomeView from "@/views/HomeView.vue";
 import Header from "@/components/Header.vue";
-import SecondHand from "@/views/SecondHand.vue";
 import Content from "@/components/Content.vue";
 </script>
 
 <template>
-
     <Header/>
     <Content/>
 </template>

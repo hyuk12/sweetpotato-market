@@ -23,6 +23,7 @@ public class MemberController {
     @PostMapping("/member")
     public ResponseEntity<? extends ResponseDto> register(@RequestBody @Valid MemberReqDto memberReqDto){
         // 회원가입 로직
+        memberService.duplicatedUsername(memberReqDto);
         memberService.register(memberReqDto);
         return ResponseEntity.ok().body(ResponseDto.ofDefault());
     }

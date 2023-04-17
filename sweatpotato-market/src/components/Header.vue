@@ -1,7 +1,8 @@
 <template>
     <el-menu class="container" mode="horizontal" router>
         <div class="menu-bar d-flex justify-content-center align-items-center">
-            <el-menu-item class="img-container" index="/"><img class="logo-img" src="public/img/cherrymarket.jpg" alt=""></el-menu-item>
+            <el-menu-item class="img-container" index="/login"><img class="logo-img" src="../assets/img/cherrymarket.jpg" alt=""></el-menu-item>
+            <el-menu-item index="/signup">회원가입</el-menu-item>
             <el-menu-item index="/secondhand">중고거래</el-menu-item>
             <el-menu-item index="3">동네가게</el-menu-item>
             <el-menu-item index="4">알바</el-menu-item>
@@ -17,6 +18,7 @@
 </template>
 <script setup lang="ts">
 import {ref} from "vue";
+import cherrymarket from "@/assets/img/cherrymarket.jpg"
 
 const input = ref();
 const menu = ref({

@@ -14,3 +14,5 @@ spring:
     show-sql: true
 
 
+jwt:
+  secretKey: 4KsL7EUyDa0B17b6buJIANDYsgavTXmK4KsL7EUyDa0B17b6buJIANDYsgavTXmK
