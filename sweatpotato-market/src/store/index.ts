@@ -1,0 +1,10 @@
+// src/store/index.ts
+import { createStore } from "vuex";
+import userStore from "@/store/modules/userStore";
+
+
+export default createStore({
+    modules: {
+        user: userStore,
+    },
+});
