@@ -69,7 +69,9 @@ public class JwtTokenProvider {
     public boolean validateToken(String token) {
         try {
             // 토큰이 유효한지 확인 문제가 생기면 exception 발생
-
+            if (token == null || token.isEmpty()) {
+                return false;
+            }
             Jwts.parserBuilder()
                     .setSigningKey(key) // 해당 키로 이루어져 있는지 확인 작업
                     .build()

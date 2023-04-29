@@ -8,7 +8,7 @@ const username = ref("");
 const password = ref("");
 const store = useStore();
 
-const login = async () => {
+const Login = async () => {
     const data = {
         username: username.value,
         password: password.value,
@@ -23,7 +23,7 @@ const login = async () => {
     try {
         const response = await axios.post("/api/member/login", JSON.stringify(data), options);
         if (response.status === 200) {
-            store.commit("user/login", {
+            store.commit("userStore/login", {
                 userId: response.data.userId,
                 userName: response.data.userName,
                 accessToken: response.data.accessToken,
@@ -59,7 +59,7 @@ const login = async () => {
         </div>
 
         <div>
-            <el-button class="submit-button" type="primary" @click="login()">로그인</el-button>
+            <el-button class="submit-button" type="primary" @click="Login()">로그인</el-button>
         </div>
     </div>
 </template>
